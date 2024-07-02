@@ -17,8 +17,16 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'about-us',
+    title: 'About us',
+    loadComponent: () =>
+      import('./pages/about-us/about-us.component').then(
+        (mod) => mod.AboutUsComponent
+      ),
+  },
+  {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
 ];
