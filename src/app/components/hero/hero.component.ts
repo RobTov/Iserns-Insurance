@@ -19,6 +19,5 @@ import { TestLanguage } from '../../interfaces/test.model';
 })
 export class HeroComponent {
   public languageService = inject(LanguageService);
-  public testText = TestLanguage  
-  
+  public testText = TestLanguage;
 }

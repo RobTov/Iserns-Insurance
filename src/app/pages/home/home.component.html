@@ -1,5 +1,24 @@
 <app-hero />
 
-<div class="min-h-[400px] mt-5 ml-5">
-  <app-insurance-card />
+<div
+  class="w-[80%] grid grid-cols-[repeat(auto-fit,_16.66666%)] justify-center m-auto gap-5 mt-5"
+>
+  @for (item of cardItems; track $index) {
+  <div class="w-full col-span-2 justify-center justify-self-center mx-auto">
+    <app-insurance-card
+      [title]="
+        languageService.currentLanguageComputed() === 'es'
+          ? item.title.es
+          : item.title.en
+      "
+      [description]="
+        languageService.currentLanguageComputed() === 'es'
+          ? item.description.es
+          : item.description.en
+      "
+      [image]="item.image"
+    />
+  </div>
+
+  }
 </div>
