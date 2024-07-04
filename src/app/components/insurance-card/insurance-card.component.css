@@ -1,3 +1,7 @@
 :host {
   display: block;
 }
+
+.form-group {
+  margin-top: .35rem;
+}
