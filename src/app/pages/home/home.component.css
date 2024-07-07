@@ -2,3 +2,16 @@
   display: block;
 }
 
+.card {
+  flex: 40%;
+}
+
+@media screen and (max-width: 450px) {
+  .cards-container {
+    width: 100%;
+  }
+
+    .card {
+      flex: 100%;
+    }
+}
