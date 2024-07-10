@@ -5,7 +5,7 @@ export const InsuranceCards = [
       en: 'Health Policy',
     },
     description: {
-      es: 'lorem ipsum dolor',
+      es: 'Un poder que te protege.',
       en: 'lorem ipsum dolor',
     },
     image: '../../../assets/images/beam-registration-of-medical-insurance.png',
@@ -16,7 +16,7 @@ export const InsuranceCards = [
       en: 'Dental Policy',
     },
     description: {
-      es: 'lorem ipsum dolor',
+      es: 'Recupera la confianza en tu sonrisa con nuestro seguro dental.',
       en: 'lorem ipsum dolor',
     },
     image:
@@ -28,7 +28,7 @@ export const InsuranceCards = [
       en: 'Life Policy and Supplements',
     },
     description: {
-      es: 'lorem ipsum dolor',
+      es: 'Garantiza su seguridad financiera en caso de lo inesperado.',
       en: 'lorem ipsum dolor',
     },
     image:
@@ -40,7 +40,7 @@ export const InsuranceCards = [
       en: 'Car Policy',
     },
     description: {
-      es: 'lorem ipsum dolor',
+      es: 'Conduce tranquilo, nosotros nos encargamos del resto.',
       en: 'lorem ipsum dolor',
     },
     image: '../../../assets/images/bubble-gum-car-insurance.png',

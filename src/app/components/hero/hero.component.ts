@@ -7,7 +7,7 @@ import {
   signal,
 } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
-import { TestLanguage } from '../../interfaces/test.model';
+import { HomeHeroText } from '../../interfaces/home-hero.model';
 
 @Component({
   selector: 'app-hero',
@@ -19,5 +19,5 @@ import { TestLanguage } from '../../interfaces/test.model';
 })
 export class HeroComponent {
   public languageService = inject(LanguageService);
-  public testText = TestLanguage;
+  public heroText = HomeHeroText;
 }

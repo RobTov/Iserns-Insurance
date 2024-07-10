@@ -94,7 +94,7 @@
   <div class="navbar-end">
     <ul class="menu menu-horizontal px-1">
       <li>
-        <details>
+        <details class="w-[160px]">
           <summary>
             {{
               languageService.currentLanguageComputed() === "es"
@@ -102,9 +102,28 @@
                 : navbarText.lang.en
             }}
           </summary>
-          <ul class="p-2">
-            <li><a (click)="setLanguage('es')">Español</a></li>
-            <li><a (click)="setLanguage('en')">English</a></li>
+          <ul>
+            <li>
+              <span (click)="setLanguage('es')">
+                <img
+                  src="../../../assets/images/icons8-spain-48-round.png"
+                  alt="spanish"
+                  width="50"
+                  height="50"
+                />Español</span
+              >
+            </li>
+            <li>
+              <span (click)="setLanguage('en')">
+                <img
+                  src="../../../assets/images/icons8-uk-48-round.png"
+                  alt="english"
+                  width="50"
+                  height="50"
+                />
+                English</span
+              >
+            </li>
           </ul>
         </details>
       </li>
