@@ -1,14 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  inject,
+} from '@angular/core';
+import { AboutCardComponent } from '../../components/about-card/about-card.component';
+import { AboutCardsModel } from '../../interfaces/about-cards-model';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule, AboutCardComponent],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutUsComponent { }
+export class AboutUsComponent {
+  public aboutCardsContent = AboutCardsModel;
+  public languageService = inject(LanguageService);
+}

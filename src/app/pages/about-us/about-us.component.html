@@ -1,1 +1,20 @@
-<p>about-us works!</p>,
+<section class="w-full flex justify-center items-center mt-4 test1">
+  <div class="w-[80%] flex flex-col justify-center items-center test2">
+    @for (content of aboutCardsContent; track $index) {
+    <app-about-card
+      class="w-full"
+      [title]="
+        languageService.currentLanguageComputed() === 'es'
+          ? content.title.es
+          : content.title.en
+      "
+      [description]="
+        languageService.currentLanguageComputed() === 'es'
+          ? content.description.es
+          : content.description.en
+      "
+      [image]="content.image"
+    />
+    }
+  </div>
+</section>

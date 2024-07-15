@@ -4,8 +4,8 @@ export const NavbarText = {
     en: 'Home',
   },
   about: {
-    es: 'Acerca de Nosotros',
-    en: 'About us',
+    es: 'Acerca de',
+    en: 'About',
   },
   who: {
     es: 'Quienes Somos',
