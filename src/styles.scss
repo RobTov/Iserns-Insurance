@@ -10,3 +10,22 @@
 .yellow-font {
     color: #f6cc27;
 }
+
+.main-title-font-size {
+    font-size: 3.5rem;
+}
+
+.subtitles-font-size {
+    font-size: 1.5rem;
+}
+
+.nav-titles {
+    font-size: 1.2rem;
+    transition: .3s ease-in;
+
+    &:hover {
+        text-decoration: underline;
+        transform: scale(1.1);
+        opacity: .7;
+    }
+}
