@@ -62,8 +62,8 @@
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li class="nav-titles">
-        <a routerLink="home nav-titles">
+      <li class="nav-titles mr-1">
+        <a routerLink="home">
           {{
             languageService.currentLanguageComputed() === "es"
               ? navbarText.home.es
@@ -71,7 +71,7 @@
           }}
         </a>
       </li>
-      <li>
+      <li class="nav-titles mr-1">
         <a routerLink="who-we-are">
           {{
             languageService.currentLanguageComputed() === "es"
@@ -80,7 +80,7 @@
           }}
         </a>
       </li>
-      <li>
+      <li class="nav-titles">
         <a routerLink="about-us">
           {{
             languageService.currentLanguageComputed() === "es"

@@ -1,7 +1,9 @@
 <section class="w-full flex justify-center items-center mt-4 test1">
   <div class="w-[80%] flex flex-col justify-center items-center test2">
+    <h2>Saber mas</h2>
+
     @for (content of aboutCardsContent; track $index) {
-    <app-about-card
+    <!-- <app-about-card
       class="w-full"
       [title]="
         languageService.currentLanguageComputed() === 'es'
@@ -14,7 +16,38 @@
           : content.description.en
       "
       [image]="content.image"
-    />
+    /> -->
+
+    <div class="join join-vertical w-full mt-4">
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input
+          type="radio"
+          [name]="'my-accordion-4 + index'"
+          [checked]="$index === 0 ? 'checked' : ''"
+        />
+        <div class="collapse-title text-xl font-medium">
+          {{ content.title.es }}
+        </div>
+        <div class="collapse-content">
+          <div class="flex flex-col items-center justify-center">
+            <img
+              [src]="content.image"
+              [alt]="content.title"
+              [ngClass]="{
+                'to-left': $index % 2 === 0,
+                'to-right': $index % 2 !== 0
+              }"
+            />
+            <p>{{ content.description.es }}</p>
+
+            @if ($index === 1) {
+            <app-about-medicare />
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
     }
   </div>
 </section>

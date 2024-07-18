@@ -14,7 +14,13 @@
             : heroText.slogan.en
         }}
       </p>
-      <button class="btn btn-primary">Get Started</button>
+      <button class="btn btn-primary" [routerLink]="'/about-us'">
+        {{
+          languageService.currentLanguageComputed() === "es"
+            ? heroText.button.es
+            : heroText.button.en
+        }}
+      </button>
     </div>
   </div>
 </div>

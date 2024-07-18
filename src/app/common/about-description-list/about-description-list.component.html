@@ -1,0 +1,11 @@
+<h3>
+  {{ languageService.currentLanguageComputed() === "es" ? title.es : title.en }}
+</h3>
+
+<ul class="list-disc">
+  @for (item of list; track $index) {
+  <li>
+    {{ languageService.currentLanguageComputed() === "es" ? item.es : item.en }}
+  </li>
+  }
+</ul>
