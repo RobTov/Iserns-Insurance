@@ -1,11 +1,25 @@
-<h3>
-  {{ languageService.currentLanguageComputed() === "es" ? title.es : title.en }}
-</h3>
+<div class="mt-3">
+  <h3 class="about-subtitles">
+    {{
+      languageService.currentLanguageComputed() === "es" ? title.es : title.en
+    }}
+  </h3>
+</div>
 
-<ul class="list-disc">
+@if (isOrdered) {
+<ol class="list-decimal list-inside mt-1">
+  @for (item of list; track $index) {
+  <li>
+    {{ languageService.currentLanguageComputed() === "es" ? item.es : item.en }}
+  </li>
+  }
+</ol>
+} @else {
+<ul class="list-disc mt-1">
   @for (item of list; track $index) {
   <li>
     {{ languageService.currentLanguageComputed() === "es" ? item.es : item.en }}
   </li>
   }
 </ul>
+}

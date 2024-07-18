@@ -3,27 +3,38 @@
 <app-enroll-steps />
 
 <!-- class="w-[80%] grid grid-cols-[repeat(auto-fit,_16.66666%)] m-auto gap-5 mt-5 place-items-center border" -->
-<div
-  class="w-[80%] m-auto flex flex-wrap place-items-center gap-2 mt-5 cards-container"
->
-  @for (item of cardItems; track $index) {
-  <div
-    class="card flex flex-row justify-center justify-self-center mx-auto mt-3"
-  >
-    <app-insurance-card
-      [title]="
-        languageService.currentLanguageComputed() === 'es'
-          ? item.title.es
-          : item.title.en
-      "
-      [description]="
-        languageService.currentLanguageComputed() === 'es'
-          ? item.description.es
-          : item.description.en
-      "
-      [image]="item.image"
-    />
-  </div>
 
-  }
-</div>
+<section class="w-full flex flex-col items-center justify-center mt-[4.3rem]">
+  <h2 class="text-primary secondary-title">
+    {{
+      languageService.currentLanguageComputed() === "es"
+        ? "Descubre nuestros planes"
+        : "Discover our plans"
+    }}
+  </h2>
+
+  <div
+    class="w-[80%] m-auto flex flex-wrap place-items-center gap-2 mt-5 cards-container"
+  >
+    @for (item of cardItems; track $index) {
+    <div
+      class="card flex flex-row justify-center justify-self-center mx-auto mt-3"
+    >
+      <app-insurance-card
+        [title]="
+          languageService.currentLanguageComputed() === 'es'
+            ? item.title.es
+            : item.title.en
+        "
+        [description]="
+          languageService.currentLanguageComputed() === 'es'
+            ? item.description.es
+            : item.description.en
+        "
+        [image]="item.image"
+      />
+    </div>
+
+    }
+  </div>
+</section>

@@ -19,6 +19,7 @@ import { TranslationBase } from '../../interfaces/translation-base.model';
 export class AboutDescriptionListComponent {
   @Input({ required: true }) title: TranslationBase = { es: '', en: '' };
   @Input({ required: true }) list: TranslationBase[] = [];
+  @Input({ required: false }) isOrdered: boolean = false;
 
   public languageService = inject(LanguageService);
 }
