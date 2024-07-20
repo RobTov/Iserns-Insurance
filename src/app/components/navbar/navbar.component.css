@@ -1,4 +1,8 @@
-:host {
-  display: block;
-}
+.m-hover {
+  transition: .3s ease-in;
 
+  &:hover {
+    opacity: .9;
+    transform: scale(1.02);
+  }
+}
