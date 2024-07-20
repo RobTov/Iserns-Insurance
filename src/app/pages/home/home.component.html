@@ -38,3 +38,30 @@
     }
   </div>
 </section>
+
+<section class="w-full flex flex-col items-center mt-[4.3rem]">
+  <h2 class="text-primary secondary-title">
+    {{
+      languageService.currentLanguageComputed() === "es"
+        ? "Lo que dicen nuestros clientes"
+        : "What our clients say about us"
+    }}
+  </h2>
+
+  <div
+    class="w-[80%] flex flex-wrap items-center justify-center mt-[2.3rem] gap-[1.2rem]"
+  >
+    @for (testimonial of testimonialText; track $index) {
+    <app-testimonial-card
+      [client]="testimonial.client"
+      [date]="testimonial.date"
+      [comment]="
+        languageService.currentLanguageComputed() === 'es'
+          ? testimonial.comment.es
+          : testimonial.comment.en
+      "
+      [index]="$index"
+    />
+    }
+  </div>
+</section>

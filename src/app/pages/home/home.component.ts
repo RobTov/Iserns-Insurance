@@ -5,6 +5,8 @@ import { InsuranceCardComponent } from '../../components/insurance-card/insuranc
 import { InsuranceCards } from '../../interfaces/insurance-cards.model';
 import { LanguageService } from '../../services/language.service';
 import { EnrollStepsComponent } from '../../components/enroll-steps/enroll-steps.component';
+import { TestimonialCardsText } from '../../interfaces/testimonial-cards.model';
+import { TestimonialCardComponent } from '../../components/testimonial-card/testimonial-card.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +16,7 @@ import { EnrollStepsComponent } from '../../components/enroll-steps/enroll-steps
     HeroComponent,
     InsuranceCardComponent,
     EnrollStepsComponent,
+    TestimonialCardComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -22,4 +25,5 @@ import { EnrollStepsComponent } from '../../components/enroll-steps/enroll-steps
 export class HomeComponent {
   public cardItems = InsuranceCards;
   public languageService = inject(LanguageService);
+  public testimonialText = TestimonialCardsText;
 }
