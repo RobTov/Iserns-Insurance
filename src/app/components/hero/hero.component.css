@@ -1,8 +1,9 @@
-:host {
-  display: block;
-}
-
 .hero {
   background-image: url('../../../assets/images/healthy-family1.jpg');
+}
+
+.test {
+  width: 100%;
+  border: 1px solid magenta;
 }
 
