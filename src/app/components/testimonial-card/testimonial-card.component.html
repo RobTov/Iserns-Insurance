@@ -1,44 +1,48 @@
 <div class="card bg-base-100 w-[350px] h-[350px] shadow-xl">
   <div class="card-body">
     <div class="flex w-full mt-5 justify-between">
-      <h2 class="card-title text-primary">{{ client }}</h2>
+      <h2 class="card-title text-primary font-light">{{ client }}</h2>
       <h2 class="card-title text-primary font-light">{{ date }}</h2>
     </div>
 
-    <p>{{ comment }}</p>
-    <div class="card-actions justify-end">
-      <div class="rating">
-        <input
-          type="radio"
-          [name]="'rating-2' + index"
-          class="mask mask-star-2 bg-primary"
-          disabled
-        />
-        <input
-          type="radio"
-          [name]="'rating-2' + index"
-          class="mask mask-star-2 bg-primary"
-          disabled
-        />
-        <input
-          type="radio"
-          [name]="'rating-2' + index"
-          class="mask mask-star-2 bg-primary"
-          disabled
-        />
-        <input
-          type="radio"
-          [name]="'rating-2' + index"
-          class="mask mask-star-2 bg-primary"
-          disabled
-        />
-        <input
-          type="radio"
-          [name]="'rating-2' + index"
-          class="mask mask-star-2 bg-primary"
-          checked="checked"
-          disabled
-        />
+    <div
+      class="mt-5 w-full h-[200px] flex flex-col items-center justify-center"
+    >
+      <p>{{ comment }}</p>
+      <div class="card-actions justify-end">
+        <div class="rating">
+          <input
+            type="radio"
+            [name]="'rating-2' + index"
+            class="mask mask-star-2 bg-primary"
+            disabled
+          />
+          <input
+            type="radio"
+            [name]="'rating-2' + index"
+            class="mask mask-star-2 bg-primary"
+            disabled
+          />
+          <input
+            type="radio"
+            [name]="'rating-2' + index"
+            class="mask mask-star-2 bg-primary"
+            disabled
+          />
+          <input
+            type="radio"
+            [name]="'rating-2' + index"
+            class="mask mask-star-2 bg-primary"
+            disabled
+          />
+          <input
+            type="radio"
+            [name]="'rating-2' + index"
+            class="mask mask-star-2 bg-primary"
+            checked="checked"
+            disabled
+          />
+        </div>
       </div>
     </div>
   </div>
