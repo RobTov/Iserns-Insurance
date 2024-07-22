@@ -27,7 +27,6 @@
     <div class="w-full mt-[2rem] h-[400px] flex justify-center gap-[10rem]">
       @for (text of insuranceCardsText; track $index) {
       <app-insurance-card
-        class="w-[200px] h-[200px]"
         [title]="text.title.es"
         [description]="text.description.es"
         [image]="text.image"

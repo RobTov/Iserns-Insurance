@@ -1,8 +1,26 @@
-<div class="w-full flex">
-  <div class="card bg-base-100 w-96 shadow-xl justify-self-end align-self-end">
-    <div class="card-body">
-      <div class="card-actions justify-end"></div>
-      <p>We are using cookies for no reason.</p>
+<div class="w-full flex lg:justify-end justify-center">
+  <div class="card h-[80px] bg-primary w-[300px] shadow-xl lg:mr-[10rem] m-4">
+    <div
+      class="w-full text-white w-full h-full flex flex-wrap items-center justify-around"
+    >
+      <div class="flex flex-col gap-1">
+        <p class="phone-text text-lg font-bold">(786) 402-8938</p>
+        <p class="font-light">
+          {{
+            languageService.currentLanguageComputed() === "es"
+              ? "Contáctenos ahora"
+              : "Contact us now"
+          }}
+        </p>
+      </div>
+
+      <div class="avatar">
+        <div class="w-16 rounded-full">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </div>
