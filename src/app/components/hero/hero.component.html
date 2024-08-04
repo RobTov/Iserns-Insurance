@@ -26,10 +26,13 @@
     </div>
     <div class="w-full mt-[2rem] h-[400px] flex justify-center gap-[10rem]">
       @for (text of insuranceCardsText; track $index) {
-      <app-insurance-card
-        [title]="text.title.es"
-        [description]="text.description.es"
-        [image]="text.image"
+      <app-insurance-card2
+        [title]="
+          languageService.currentLanguageComputed() === 'es'
+            ? text.title.es
+            : text.title.en
+        "
+        [image]="text.image2"
       />
       }
     </div>

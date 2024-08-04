@@ -1,3 +1,17 @@
 .step {
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.card0 {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    height: 10px;
+    left: 50%;
+    top: 175px;
+    border-bottom: 2px dashed #007f8a;
+    border-left: none;
+  }
 }

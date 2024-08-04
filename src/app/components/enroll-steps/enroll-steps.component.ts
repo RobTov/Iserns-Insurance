@@ -21,16 +21,16 @@ export class EnrollStepsComponent {
   public languageService = inject(LanguageService);
   public enrollStepsText = EnrollStepsText;
 
-  ngOnInit(): void {
-    setInterval(() => this.stepAnimationCounter(), 1200);
-  }
+  // ngOnInit(): void {
+  //   setInterval(() => this.stepAnimationCounter(), 1200);
+  // }
 
-  private stepAnimationCounter(): void {
-    if (this.currentActiveStep() === 3) {
-      this.currentActiveStep.set(1);
-      return;
-    }
+  // private stepAnimationCounter(): void {
+  //   if (this.currentActiveStep() === 3) {
+  //     this.currentActiveStep.set(1);
+  //     return;
+  //   }
 
-    this.currentActiveStep.update((s) => (s += 1));
-  }
+  //   this.currentActiveStep.update((s) => (s += 1));
+  // }
 }
